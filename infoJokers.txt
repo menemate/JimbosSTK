@@ -1,0 +1,344 @@
+1. You Need To Told To To Stop
+Rarity: 1
+Cost: 4
+Effect: Gains X0.1 Mult each time a card is destroyed (Currently X1 Mult)
+Hidden: None
+
+2. One Shut Up
+Rarity: 1
+Cost: 5
+Effect: Earn $10 when Blind is defeated in 1 Hand
+Hidden: None
+
+3. RT Track
+Rarity: 1
+Cost: 3
+Effect: Gives +5 Mult for every Ace, 2, 3, 5 or 8 played, gives +15 Chips for every 4, 6 or 7 played
+Hidden: None
+
+4. Checkline Exploit
+Rarity: 1
+Cost: 2
+Effect: +50 Chips for each Blind skipped this run (Currently +0 Chips)
+Hidden: None
+
+5. YDUNOCAN
+Rarity: 1
+Cost: 4
+Effect: Gains +2 Chips when drawing a card outside Blind battle (Currently +0 Chips)
+Hidden: None
+
+6. Lag Forest
+Rarity: 1
+Cost: 5
+Effect: Scores X0.5 Mult for every 6 times the hand played scored
+Hidden: Starts at x1 Mult, playing a hand 6+ times increases to X1.5, 12+ = X2.0 etc.
+
+7. Picked Up A Bit Of A Bomb
+Rarity: 1
+Cost: 5
+Effect: +30 Mult, -1 Mult per non-face card played
+Hidden: Destroys itself when Mult given becomes 0 or less
+
+8. No All On Mult
+Rarity: 1
+Cost: 5
+Effect: 1 in 4 chance for Wild Cards to give X1 Chips, this increases by X0.1 per Ante
+Hidden: Ante 1 = X1.1 Chips, 2 = X1.2 etc.
+
+9. Gift Box
+Rarity: 1
+Cost: 4
+Effect: When this Joker is sold, create 1 STK Joker and 1 Powerup Card (needs space)
+Hidden: None
+
+10. very funny lol
+Rarity: 2
+Cost: 6
+Effect: don't make the circles better at all by repeating my Aces, 2s and 3s three times
+Hidden: Basically it repeats Aces, 2s and 3s scored three more times
+
+11. Ranking Table
+Rarity: 2
+Cost: 7
+Effect: 900 in 7000 chance to gain +350 Chips if played hand contains a Straight (Currently +0 Chips)
+Hidden: None
+
+12. Plungerface
+Rarity: 2
+Cost: 5
+Effect: 1 in 4 chance for cards left in hand to be faced down, gives X1 Mult that increases by X0.75 for every card facing down in your hand
+Hidden: None
+
+13. aea
+Rarity: 2
+Cost: 6
+Effect: When scoring hand is exactly 3oaK or 4oaK, level up played hand, but -1 Hand each game
+Hidden: 3oaK = three of a kind, 4oaK = four of a kind
+
+14. 1010511
+Rarity: 2
+Cost: 8
+Effect: +11 Mult for every five 10s in the deck, retrigger played 10s (Currently +0 Mult)
+Hidden: None
+
+15. Redface
+Rarity: 2
+Cost: 6
+Effect: For this Blind gains X0.4 Mult for every scoring face card from the Hearts suit (Currently X1 Mult)
+Hidden: None
+
+16. Stukroche
+Rarity: 2
+Cost: 6
+Effect: +3 Hand Size, $-1 per card discarded
+Hidden: None
+
+17. Installed Spy Camera
+Rarity: 2
+Cost: 4
+Effect: Steel, Gold, Blue Seal and Purple Seal cards will also activate when scored
+Hidden: for example, when scored Steel Cards give X1.5 Mult, Gold Cards give 3 Gold, Blue Seal give the Planet of played hand, Purple Seal give a random Tarot
+
+18. Story Mode
+Rarity: 2
+Cost: 4
+Effect: During Blind battle, multiply listed probabilities by X0.5 for every Wild Card in the deck upon entering battle (Currently X1)
+Hidden: Probabilities stay at their base value with no Wild Cards in the deck, 1 Wild Card = X1.5, 2 Wilds = X2 etc.
+
+19. Rhomboor
+Rarity: 3
+Cost: 8
+Effect: X3 Mult if played hand has exactly 4 cards
+Hidden: None
+
+20. Jetbus 3+ SSD Facelift
+Rarity: 3
+Cost: 9
+Effect: +3 Joker Slots, $-3 for every played hand. Once inside, you cannot leave it
+Hidden: This Joker is Eternal no matter what
+
+21. Loland Pranked
+Rarity: 3
+Cost: 8
+Effect: 1 in 64 chance to give X64 Mult, 1 in 16 chance to convert all cards played into Glass Cards
+Hidden: None
+
+22. Bobi
+Rarity: 3
+Cost: 10
+Effect: Copies the effect of the Joker in position 1 if compatible, target changes at the end of each Blind
+Hidden: None
+
+23. Eat Hand
+Rarity: 3
+Cost: 8
+Effect: -2 Hand Size, +6 Discards
+Hidden: None
+
+24. Starving Toxicant
+Rarity: 3
+Cost: 9
+Effect: Gain $1 of sell value on every Joker and Consumable every 3 shop rerolls (0/3)
+Hidden: None
+
+25. Team GP
+Rarity: 3
+Cost: 8
+Effect: 1 in 3 chance to create a random Tag when scoring hand contains a Flush
+Hidden: Boss Tag does not appear and is replaced by Negative Tag
+
+26. Cope Drink
+Rarity: 3
+Cost: 8
+Effect: When the first hand of round is played, apply a random Edition or Seal to a random scoring card
+Hidden: None
+
+27. Rebby
+Rarity: 3
+Cost: 7
+Effect: Makes sure current Chips or Mult are at least 15% of the other
+Hidden: None
+
+28. Randy
+Rarity: 3
+Cost: 7
+Effect: Each scoring card permanently gains a random amount of Chips, 1 in 15 chance to also permanently gain X0.25 Mult
+Hidden: Permanent Chips are a number between 5 and 10 included
+
+29. TME
+Rarity: 3
+Cost: 7
+Effect: Other Uncommon and Rare Jokers will balance the score by 25% and 50%
+Hidden: Uncommon = 25%, Rare = 50%. Balancing is what the Plasma Deck does at 100% instead
+
+30. mimiz
+Rarity: 4
+Cost: 20
+Effect: 111 random effects (111 left)
+Hidden: When added generate Negative Oops all 6 based on current dollars (11 + dollars * 4)
+    When removed apply polychrome to jokers with no edition
+    When opening a booster 60% to create a negative Tarot/Planet/Spectral/Powerup/Timewarp
+    When buying a card 20% to give $5
+    When rerolling 15% to increase all sell value/double Tag/double $
+    When ending shop 30% to create a negative joker (not self)
+    When skipping blind generate Tags based on Ante level (count as single effect)
+    When skipping booster 40% to give $11
+    When using a tarot/spectral/powerup/timewarp, generate a card with the most present suit in the deck, chance is around 30% but can be less depending on Tarots used
+    When using a planet, 1/3 level up all hands based on total hands played (hands * 11)
+    Before discarding, 10% to add Purple Seal on each discarding card
+    Before playing the hand, 10% to add Polychrome/Red/Gold on each played card
+    While scoring 3/20 to give +24 Chips / +5 Mult / x1.11 Mult for every card scored
+    Also while scoring 1/8 to permanently add +11 Chips / +2 Mult / x0.05 Mult for every card scored
+    Also while scoring 1/11 to retrigger the card scored
+    When other jokers score 25% to give a random amount of Xmult (1.1 to 2.4)
+
+31. How are hippies?
+Rarity: 1
+Cost: 7
+Effect: +20 Chips, opening 3 Booster Packs will evolve this card (0/3)
+Hidden: When evolving this card is destroyed and 'expand natural resources?' is created. This Joker does not appear in shop when 'expand natural resources?', 'when I play I use old code' or 'Books!' is in play
+
+32. expand natural resources?
+Rarity: 1
+Cost: 14
+Effect: +12 Mult, selling 5 items will evolve this card (0/5)
+Hidden: When evolving this card is destroyed and 'when I play I use old code' is created. This Joker does not appear in shop
+
+33. when I play I use old code
+Rarity: 2
+Cost: 21
+Effect: X2 Mult, playing [most played hand] 7 times will evolve this card (0/5)
+Hidden: When evolving this card is destroyed and 'Books!' is created. This Joker does not appear in shop. Most played hand required does not change even if most played hand becomes a different hand
+
+34. Books!
+Rarity: 3
+Cost: 28
+Effect: This Joker gains +15 Chips / +3 Mult / X0.1 Mult when opening Booster Packs / selling items / playing [most played hand] (Currently +0 Chips / +0 Mult / X1.7 Mult)
+Hidden: This Joker does not appear in shop. Most played hand required does not change even if most played hand becomes a different hand
+
+35. Owalkaz
+Rarity: 1
+Cost: 3
+Effect: Create a random Planet Card when scoring a hand containing a Full House with at least a card from the Diamonds suit (needs space)
+Hidden: None
+
+36. Boltrew
+Rarity: 2
+Cost: 7
+Effect: When shop is rerolled, create a Spectral Card. 1 in 5 chance to set cash to $0
+Hidden: The first time cash is set to $0, creates in the shop a 'Golden Boltrew'
+
+37. Golden Boltrew
+Rarity: 2
+Cost: 11
+Effect: Earn $2 when selling. Gives more Mult the further you are from $50. Gains random amount of X Mult when using a Spectral Card (Currently +25 Mult and X1 Mult)
+Hidden: Mult given is the absolute distance from $50 / 2 rounded down. Random X Mult gained is X0.05, X0.1, X0.15, X0.2 or X0.25. This Joker can't appear in shop unless generated by 'Boltrew'
+
+38. Hexley
+Rarity: 1
+Cost: 3
+Effect: Moves 25% of current Mult to Chips
+Hidden: None
+
+39. Kiki
+Rarity: 1
+Cost: 4
+Effect: 1 in 6 chance to level up Flush and Straight Flush when using a Powerup or Timewarp card
+Hidden: None
+
+40. Pepper
+Rarity: 1
+Cost: 5
+Effect: This Joker gains +1 Mult when buying a card (currently +0 Mult)
+Hidden: Gains 2 Mult upon being bought for some reason
+
+41. Wilber
+Rarity: 1
+Cost: 3
+Effect: Before scoring moves Chips to Mult
+Hidden: It's actually before the first card scores, won't happen if no card scores
+
+42. Adiumy
+Rarity: 2
+Cost: 6
+Effect: Retrigger all scoring Clubs
+Hidden: None
+
+43. Emule
+Rarity: 2
+Cost: 8
+Effect: 1 in 2 chance to gain $ back when buying Tarot cards and Arcana Packs in the shop
+Hidden: None
+
+44. Gavroche
+Rarity: 2
+Cost: 6
+Effect: Adds 2 Wild Jacks to the deck when selecting a Blind
+Hidden: None
+
+45. Konqi
+Rarity: 2
+Cost: 6
+Effect: X2.5 Chips if played hand as at least 3 Stone Cards
+Hidden: None
+
+46. Sara
+Rarity: 2
+Cost: 6
+Effect: Adds a copy of the most present card (rank and suit) to the deck when skipping a Booster Pack
+Hidden: None
+
+47. Suzanne
+Rarity: 2
+Cost: 6
+Effect: When discarding 1 card only, destroy it
+Hidden: None
+
+48. Xue
+Rarity: 2
+Cost: 6
+Effect: At the start of the Blind, this Joker gains X Mult for every consecutive Joker of different rarity from left to right. Resets after Blind (Currently X1 Mult)
+Hidden: Common Jokers add X0.1 Mult, Uncommon X0.2, Rare X0.3, Legendary X0.4
+
+49. Amanda
+Rarity: 3
+Cost: 8
+Effect: Every 5 Booster Packs opened (0/5), destroy the Joker on the right and then copy the one on the left
+Hidden: The copy won't work if no Joker was destroyed or no Joker is on the left
+
+50. Godette
+Rarity: 3
+Cost: 9
+Effect: Earn $1 per non-face card discarded
+Hidden: None
+
+51. Pidgin
+Rarity: 3
+Cost: 7
+Effect: Reduce Blind score requirement by 0% each played hand. The reduction is increased by 1% for every scoring Spades card played. The reduction resets after Boss Blind
+Hidden: None
+
+52. Puffy
+Rarity: 3
+Cost: 8
+Effect: Creates 1 Powerup Card and X2 Mult when exactly playing High Card, Pair or Two Pairs containing at least a rank from 6 to 10 (Needs space)
+Hidden: None
+
+53. Gnu
+Rarity: 4
+Cost: 20
+Effect: 2 Rounds after playing High Card (0/2), sell this card to generate a Negative version of all the cards sold in those 2 Rounds (before this card starts shaking)
+Hidden: None
+
+54. Nolok
+Rarity: 4
+Cost: 20
+Effect: When opening a Booster Pack generate 1 (max 3) Negative Powerup or Timewarp Card for every 2 Stone Cards in the deck
+Hidden: Powerup Cards have a 2 in 1 ratio over Timewarp Cards
+
+55. Tux
+Rarity: 4
+Cost: 20
+Effect: At the end of the round, this Joker gains X0.1 Mult additionally increasing for every remaining Hand (Currently X1 Mult)
+Hidden: None

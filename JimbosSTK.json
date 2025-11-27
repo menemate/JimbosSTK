@@ -1,0 +1,15 @@
+{
+  "id": "JimbosSTK",
+  "name": "JimbosSTK",
+  "display_name": "JimbosSTK",
+  "author": ["skindoormimiz", "CrystalDaEevee"],
+  "description": "JimbosSTK mod, the STK memes!",
+  "prefix": "stk",
+  "prefixcomment":"ABOVE PREFIX IS ADDED TO E.G. LOCALIZATION!",
+  "main_file": "JimbosSTK.lua",
+  "priority": 0,
+  "badge_colour": "ff9e01",
+  "badge_text_colour": "333333",
+  "version": "0.19.0",
+  "dependencies": ["Steamodded (>=1.0.0~BETA-0614a)"]
+}
