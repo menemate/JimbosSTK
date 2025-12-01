@@ -1090,7 +1090,7 @@ SMODS.Joker{
 --lolandPranked
 SMODS.Joker{
 	key = "lolandPranked",
-	config = { extra = { x_mult = 64, chance = 1, perchance = 64, chance2 = 1, perchance2 = 16 } },
+	config = { extra = { x_mult = 64, chance = 1, perchance = 16, chance2 = 1, perchance2 = 64 } },
 	pos = { x = 0, y = 0 },
 	rarity = 3,
 	cost = 8,

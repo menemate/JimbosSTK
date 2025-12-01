@@ -71,8 +71,8 @@ return {
 				name = "Loland Pranked",
 				text = {
 					{
-						"{C:green}#1# in #2# chance{} to give {X:mult,C:white}X#5#{} Mult",
-						"{C:green}#3# in #4# chance{} to convert all cards played into {C:attention}Glass cards{}"
+						"{C:green}#3# in #4# chance{} to give {X:mult,C:white}X#5#{} Mult",
+						"{C:green}#1# in #2# chance{} to convert all cards played into {C:attention}Glass cards{}"
 					}
 				},
 			},
