@@ -80,7 +80,7 @@ return {
 				name = "Bobi",
 				text = {
 					{
-						"Copies the effect of the joker in position {C:purple}#1#{} if compatible",
+						"Retriggers the joker in position {C:purple}#1#{}",
 						"Target changes at the end of each blind"
 					}
 				},

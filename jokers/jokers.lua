@@ -1152,21 +1152,23 @@ SMODS.Joker{
 			card.ability.extra.targetPos = math.random(#G.jokers.cards)
 		end
 
-		local target_joker = G.jokers.cards[card.ability.extra.targetPos]
-
 		--[[ local ret = SMODS.blueprint_effect(card, target_joker, context)
 		if ret then
 			SMODS.calculate_effect(ret, card)
 		end ]]
-		if target_joker and target_joker ~= card then
-			context.blueprint = (context.blueprint and (context.blueprint + 1)) or 1
-			context.blueprint_card = context.blueprint_card or card
-			if context.blueprint > #G.jokers.cards + 1 then return end
-			local target_joker_ret = target_joker:calculate_joker(context)
-			if target_joker_ret then 
-				target_joker_ret.card = context.blueprint_card or card
-				target_joker_ret.colour = G.C.RED
-				return target_joker_ret
+		if context.retrigger_joker_check and not context.retrigger_joker then
+			local target_joker = G.jokers.cards[card.ability.extra.targetPos]
+			if target_joker and target_joker ~= card then
+				if target_joker.config.center.blueprint_compat then
+					if context.other_card == target_joker then
+						return {
+							message = "Again!",
+							colour = G.C.RED,
+							repetitions = 1,
+							message_card = card
+						}
+					end
+				end
 			end
 		end
 	end,
@@ -1227,7 +1229,7 @@ SMODS.Joker{
 	config = { extra = { sell_value = 1, rerollsCount = 0 } },
 	pos = { x = 0, y = 0 },
 	rarity = 3,
-	cost = 9,
+	cost = 6,
 	blueprint_compat = false,
 	eternal_compat = true,
 	perishable_compat = false,
@@ -1271,10 +1273,10 @@ SMODS.Joker{
 --teamGP
 SMODS.Joker{
 	key = "teamGP",
-	config = { extra = { num = 1, den = 3 } },
+	config = { extra = { num = 5, den = 11 } },
 	pos = { x = 0, y = 0 },
 	rarity = 3,
-	cost = 8,
+	cost = 7,
 	blueprint_compat = true,
 	eternal_compat = true,
 	perishable_compat = true,
@@ -1704,11 +1706,10 @@ SMODS.Joker{
 			end
 		end
 		if context.skip_blind then
-			if not context.blueprint then card.ability.extra.effects = card.ability.extra.effects - 1 end
 			shakecard(card)
 			G.E_MANAGER:add_event(Event({
 				func = function()
-					for i = 1, nInteractions(G.GAME.round_resets.blind_ante * 50, card.ability.extra.effects) do
+					for i = 1, nInteractions(G.GAME.round_resets.blind_ante * 25, card.ability.extra.effects) do
 						local selected_tag = pseudorandom_element(G.P_TAGS, pseudoseed("create_tag")).key
 						local tag = Tag(selected_tag)
 						if tag.name == 'Orbital Tag' then
@@ -1727,6 +1728,7 @@ SMODS.Joker{
 						tag:set_ability()
 						add_tag(tag)
 						play_sound('holo1', 1.2 + math.random() * 0.1, 0.4)
+						if not context.blueprint then card.ability.extra.effects = card.ability.extra.effects - 1 end
 					end
 					return true
 				end
@@ -3525,10 +3527,10 @@ SMODS.Joker{
 --konqi
 SMODS.Joker{
 	key = "konqi",
-	config = { extra = { xchips = 2.5, stones = 3 } },
+	config = { extra = { xchips = 3, stones = 3 } },
 	pos = { x = 0, y = 0 },
 	rarity = 2,
-	cost = 6,
+	cost = 3,
 	blueprint_compat = true,
 	eternal_compat = true,
 	perishable_compat = true,
@@ -3782,7 +3784,7 @@ SMODS.Joker{
 --godette
 SMODS.Joker{
 	key = "godette",
-	config = { extra = { dollars = 1 } },
+	config = { extra = { dollars = 2 } },
 	pos = { x = 0, y = 0 },
 	rarity = 3,
 	cost = 9,
@@ -3939,7 +3941,7 @@ SMODS.Joker{
 		if context.before and context.cardarea == G.jokers and context.scoring_name == 'High Card' and not card.ability.extra.began and not context.blueprint then
 			shakecard(card)
 			card.ability.extra.began = true
-			local moneyEasing = math.min(25, G.GAME.dollars * 0.5)
+			local moneyEasing = math.min(25, math.floor(G.GAME.dollars * 0.5))
 			ease_dollars(moneyEasing)
 			return {
 				message = localize('$')..moneyEasing,

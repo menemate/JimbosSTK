@@ -336,6 +336,9 @@ SMODS.Consumable({
 		delay(0.3)
 		for i=1, hand_space do --draw cards from deckL
 			draw_card(G.deck,G.hand, i*100/hand_space,'up', true)
+			for i = 1, #G.jokers.cards do
+                G.jokers.cards[i]:calculate_joker({other_drawn = {true}})
+            end
 		end
 	end,
 
