@@ -523,7 +523,7 @@ return {
 				name = "Gown",
 				text = {
 					{
-						'Moves 5% of overflow {C:attention}final score{}',
+						'Moves 1% of overflow {C:attention}final score{}',
 						'to {C:chips}Chips{} for the next {C:attention}poker hand{} {C:inactive}(capped){}',
 						'{C:inactive}(Currently {}{C:chips}+#1#{}{C:inactive} Chips){}'
 					}

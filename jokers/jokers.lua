@@ -2724,7 +2724,7 @@ SMODS.Joker{
 		end
 
 		if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
-			card.ability.extra.chips = math.min(math.floor((G.GAME.chips - G.GAME.blind.chips) * 0.05), G.GAME.blind.chips * 0.5)
+			card.ability.extra.chips = math.min(math.floor((G.GAME.chips - G.GAME.blind.chips) * 0.01), G.GAME.blind.chips * 0.01)
 			return {
 				message = localize('k_upgrade_ex'),
 				card = card
