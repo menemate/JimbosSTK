@@ -612,7 +612,7 @@ return {
 				text = {
 					{
 						"This Joker gets better with {C:attention}current round stats{}",
-						'{C:inactive}(Currently {}{X:chips,C:white}X#1#{}{C:inactive} Chips / {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}'
+						'{C:inactive}(Currently {}{C:chips}+#1#{}{C:inactive} Chips / {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}'
 					}
 				},
 			},

@@ -3218,7 +3218,7 @@ SMODS.Joker{
 --beastie
 SMODS.Joker{
 	key = "beastie",
-	config = { extra = { x_chips = 1, x_mult = 1 } },
+	config = { extra = { chips = 0, x_mult = 1 } },
 	pos = { x = 0, y = 0 },
 	rarity = 3,
 	cost = 10,
@@ -3238,7 +3238,7 @@ SMODS.Joker{
 
 	update = function(self, card, dt)
 		if G.STAGE == G.STAGES.RUN then
-			card.ability.extra.x_chips = 1 + math.floor((G.GAME.round_scores.cards_played.amt + G.GAME.round_scores.times_rerolled.amt) / 3) * 0.01
+			card.ability.extra.chips = math.floor((G.GAME.round_scores.cards_played.amt + G.GAME.round_scores.times_rerolled.amt) / 3)
 			card.ability.extra.x_mult = 1 + math.floor((G.GAME.round_scores.cards_discarded.amt + G.GAME.round_scores.cards_purchased.amt) / 3) * 0.01
 		end
 	end,
@@ -3246,7 +3246,7 @@ SMODS.Joker{
 	calculate = function(self, card, context)
 		if context.joker_main and context.cardarea == G.jokers then
 			return {
-				x_chips = card.ability.extra.x_chips,
+				chips = card.ability.extra.chips,
 				x_mult = card.ability.extra.x_mult,
 				card = card
 			}
@@ -3254,7 +3254,7 @@ SMODS.Joker{
 	end,
 
 	loc_vars = function(self, info_queue, card)
-		return { vars = { card.ability.extra.x_chips, card.ability.extra.x_mult }, key = self.key }
+		return { vars = { card.ability.extra.chips, card.ability.extra.x_mult }, key = self.key }
 	end
 }
 
