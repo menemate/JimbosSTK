@@ -2689,6 +2689,10 @@ SMODS.Joker{
 	end
 }
 
+--[[ 
+	+0.5 Chips every 1%
+]]
+
 --gown
 SMODS.Joker{
 	key = "gown",
@@ -2724,7 +2728,15 @@ SMODS.Joker{
 		end
 
 		if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
-			card.ability.extra.chips = math.min(math.floor((G.GAME.chips - G.GAME.blind.chips) * 0.01), G.GAME.blind.chips * 0.01)
+			--[[ card.ability.extra.chips = math.min(math.floor((G.GAME.chips - G.GAME.blind.chips) * 0.01), G.GAME.blind.chips * 0.01) ]]
+			if G.GAME.chips >= G.GAME.blind.chips * 2 then card.ability.extra.chips = 80 + G.GAME.round * 3
+			elseif G.GAME.chips >= G.GAME.blind.chips * 1.8 then card.ability.extra.chips = 75 + math.floor(G.GAME.round * 2.5)
+			elseif G.GAME.chips >= G.GAME.blind.chips * 1.6 then card.ability.extra.chips = 70 + math.floor(G.GAME.round * 2)
+			elseif G.GAME.chips >= G.GAME.blind.chips * 1.4 then card.ability.extra.chips = 65 + math.floor(G.GAME.round * 1.5)
+			elseif G.GAME.chips >= G.GAME.blind.chips * 1.25 then card.ability.extra.chips = 60 + math.floor(G.GAME.round * 1.2)
+			elseif G.GAME.chips >= G.GAME.blind.chips * 1.1 then card.ability.extra.chips = 55 + G.GAME.round * 1
+			else card.ability.extra.chips = 50
+			end
 			return {
 				message = localize('k_upgrade_ex'),
 				card = card
@@ -3129,10 +3141,29 @@ SMODS.Joker{
 	end
 }
 
+function randomRank(card)
+	local r = math.random(13) + 1
+	if r == 2 then card.ability.extra.rank = "2"; card.ability.extra.id = 2
+	elseif r == 3 then card.ability.extra.rank = "3"; card.ability.extra.id = 3
+	elseif r == 4 then card.ability.extra.rank = "4"; card.ability.extra.id = 4
+	elseif r == 5 then card.ability.extra.rank = "5"; card.ability.extra.id = 5
+	elseif r == 6 then card.ability.extra.rank = "6"; card.ability.extra.id = 6
+	elseif r == 7 then card.ability.extra.rank = "7"; card.ability.extra.id = 7
+	elseif r == 8 then card.ability.extra.rank = "8"; card.ability.extra.id = 8
+	elseif r == 9 then card.ability.extra.rank = "9"; card.ability.extra.id = 9
+	elseif r == 10 then card.ability.extra.rank = "10"; card.ability.extra.id = 10
+	elseif r == 11 then card.ability.extra.rank = "Jack"; card.ability.extra.id = 11
+	elseif r == 12 then card.ability.extra.rank = "Queen"; card.ability.extra.id = 12
+	elseif r == 13 then card.ability.extra.rank = "King"; card.ability.extra.id = 13
+	elseif r == 14 then card.ability.extra.rank = "Ace"; card.ability.extra.id = 14
+	else card.ability.extra.rank = "2"; card.ability.extra.id = 2
+	end
+end
+
 --gooey
 SMODS.Joker{
 	key = "gooey",
-	config = { extra = { hands = 5, reduce = 0.5 } },
+	config = { extra = { hands = 5, reduce = 0.5, rank = '[rank]', id = 1 } },
 	pos = { x = 0, y = 0 },
 	rarity = 3,
 	cost = 10,
@@ -3150,15 +3181,25 @@ SMODS.Joker{
 					or args.source == 'rif' or args.source == 'rta' or args.source == 'sou' or args.source == 'wra' ) and true
 	end,
 
+	add_to_deck = function(self, card, from_debuff)
+		randomRank(card)
+	end,
+
 	calculate = function(self, card, context)
-		if context.joker_main and context.cardarea == G.jokers and not context.before and not context.after and hand_chips and mult then
-			hand_chips = mod_chips(math.floor(hand_chips * card.ability.extra.reduce))
-			update_hand_text({ delay = 0 }, { mult = mult, chips = hand_chips })
-			return {
-				message = 'Reduced',
-				card = card,
-				colour = G.C.CHIPS
-			}
+		if context.cardarea == G.play and context.individual and hand_chips and mult then
+			if context.other_card:get_id() == card.ability.extra.id then
+				hand_chips = mod_chips(math.floor(hand_chips * card.ability.extra.reduce))
+				update_hand_text({ delay = 0 }, { mult = mult, chips = hand_chips })
+				return {
+					message = 'Reduced',
+					card = card,
+					colour = G.C.CHIPS
+				}
+			end
+		end
+
+		if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
+			randomRank(card)
 		end
 
 		if context.setting_blind and not (context.blueprint_card or card).getting_sliced then
@@ -3170,7 +3211,7 @@ SMODS.Joker{
 	end,
 
 	loc_vars = function(self, info_queue, card)
-		return { vars = { card.ability.extra.hands, card.ability.extra.reduce * 100 }, key = self.key }
+		return { vars = { card.ability.extra.hands, card.ability.extra.reduce * 100, card.ability.extra.rank}, key = self.key }
 	end
 }
 

@@ -523,8 +523,8 @@ return {
 				name = "Gown",
 				text = {
 					{
-						'Moves 1% of overflow {C:attention}final score{}',
-						'to {C:chips}Chips{} for the next {C:attention}poker hand{} {C:inactive}(capped){}',
+						'This Joker gives {C:chips}Chips{} the higher the final score is',
+						'resets after the first {C:attention}poker hand{}',
 						'{C:inactive}(Currently {}{C:chips}+#1#{}{C:inactive} Chips){}'
 					}
 				},
@@ -545,7 +545,8 @@ return {
 					{
 						"When {C:attention}Blind{} is selected,",
 						"gain {C:blue}+#1#{} Hands but",
-						"{C:attention}halves{} current {C:chips}Chips{} when scoring",
+						"{C:attention}halves{} current {C:chips}Chips{} when scoring a {C:attention}#3#{}",
+						"{C:inactive}(rank changes at the end of each Blind){}",
 					}
 				},
 			},
